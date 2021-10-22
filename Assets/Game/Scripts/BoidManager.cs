@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoidManager : MonoBehaviour {
-    
+    public GameObject boidPrefab;
+
     // Start is called before the first frame update
     void Start() {
     }
@@ -14,6 +15,15 @@ public class BoidManager : MonoBehaviour {
         }
         if (TryGetMostLonely(out Boid lonelyBoid)) {
             lonelyBoid.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+
+        // Instantiate mock boids with mouse for testing purposes
+        if (boidPrefab) {
+            if (Input.GetMouseButtonDown(0)) {
+                Vector2 position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                GameObject boid = Instantiate(boidPrefab, position, Quaternion.identity);
+                boid.transform.SetParent(transform);
+            }
         }
     }
 
