@@ -5,31 +5,20 @@ using UnityEngine;
 public class playerControls : MonoBehaviour
 {
     [SerializeField] int speed;
+    private Rigidbody2D rigidBody;
 
     void Start()
     {
-        
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        var direction = transform.up * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
+        if (direction.magnitude > 1.0f)
         {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
+            direction.Normalize();
         }
-        if (Input.GetKey(KeyCode.A))
-        {
-            GetComponent<Rigidbody2D>().AddForce(transform.right * -1 * speed);
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * -1 * speed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            GetComponent<Rigidbody2D>().AddForce(transform.right * speed);
-        }
-
-
+        rigidBody.AddForce(direction * speed * Time.deltaTime);
     }
 }
