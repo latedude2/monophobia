@@ -13,9 +13,6 @@ public class BoidManager : MonoBehaviour {
         foreach (Boid boid in GetAllBoids()) {
             boid.UpdateLoneliness();
         }
-        if (TryGetMostLonely(out Boid lonelyBoid)) {
-            lonelyBoid.GetComponent<SpriteRenderer>().color = Color.red;
-        }
 
         // Instantiate mock boids with mouse for testing purposes
         if (boidPrefab) {
@@ -61,12 +58,6 @@ public class BoidManager : MonoBehaviour {
         } else {
             mostLonely = null;
             return false;
-        }
-    }
-
-    public void DestroyMostLonely() {
-        if (TryGetMostLonely(out Boid boid)) {
-            Destroy(boid.gameObject);
         }
     }
 }

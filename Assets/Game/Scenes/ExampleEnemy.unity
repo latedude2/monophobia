@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6b7d51c964a448b8085dc95bdb4429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aimer: {fileID: 8894146219027852111, guid: e5d1b7e5c9e6a4c529debef19b618d7b, type: 3}
+  attackTime: 1
 --- !u!4 &995584744
 Transform:
   m_ObjectHideFlags: 0
