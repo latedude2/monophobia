@@ -23,8 +23,6 @@ public class FlockAgent : MonoBehaviour
     public void Move(Vector2 velocity)
     {
         transform.right = velocity;
-        transform.position += (Vector3)velocity * Time.deltaTime;
-        var direction = transform.right + transform.position;
-        rigidBody.AddForce(direction * Time.deltaTime);
+        rigidBody.AddForce(velocity * Time.deltaTime * 2, ForceMode2D.Impulse);
     }
 }
