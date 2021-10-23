@@ -26,7 +26,7 @@ public class CohesionBehavior : FlockBehavior
 
         //create offset from agent position
         cohesionMove -= (Vector2)agent.transform.position;
-        cohesionMove = Vector2.SmoothDamp(agent.transform.up, cohesionMove, ref currentVelocity, agentSmoothTime);
+        cohesionMove = Vector2.SmoothDamp(agent.transform.right, cohesionMove, ref currentVelocity, agentSmoothTime);
         return cohesionMove;
     }
 }
