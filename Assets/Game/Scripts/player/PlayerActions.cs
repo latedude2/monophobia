@@ -82,6 +82,7 @@ public class PlayerActions : MonoBehaviour
 
     void GrabEntity()
     {
+
         Debug.Log("hell");
     }
 }
