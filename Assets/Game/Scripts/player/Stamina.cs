@@ -5,15 +5,14 @@ using UnityEngine.Events;
 
 public class Stamina : MonoBehaviour
 {
-    private float stamina = 100f;
+    public float stamina = 100f;
     [SerializeField] private float staminaRegenSpeed;
-    // Start is called before the first frame update
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         RegenerateStamina();
