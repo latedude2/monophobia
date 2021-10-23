@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 457782003}
   - component: {fileID: -3769633931189153885}
   - component: {fileID: 4008848503368021205}
+  - component: {fileID: 1333650516807661096}
   m_Layer: 3
   m_Name: Entity
   m_TagString: Runner
@@ -153,7 +154,7 @@ MonoBehaviour:
   - {x: -0.06523079, y: -0.019542992, z: 0}
   m_ShapePathHash: 297933305
   m_Mesh: {fileID: 0}
-  m_InstanceId: -206912
+  m_InstanceId: 37422
 --- !u!95 &6670370981932834681
 Animator:
   serializedVersion: 3
@@ -247,3 +248,17 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1333650516807661096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292316067377519992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964372d2e202efd41a8a44604f8f2542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  y: 1
+  x: 2

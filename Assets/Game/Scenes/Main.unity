@@ -123,7 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!43 &59743541
+--- !u!4 &799885334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1251757604585178328, guid: c437d1da488aa9848872e144213e44c7, type: 3}
+  m_PrefabInstance: {fileID: 1251757604009727058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!43 &1423119532
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,31 +292,7 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &589790237 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6997376249799785153, guid: 932a83a7fb1a8eb49b1a3d4e183949df, type: 3}
-  m_PrefabInstance: {fileID: 6997376249281988316}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &589790238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589790237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6b7d51c964a448b8085dc95bdb4429, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimer: {fileID: 8894146219027852111, guid: e5d1b7e5c9e6a4c529debef19b618d7b, type: 3}
-  attackTime: 5
---- !u!4 &799885334 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1251757604585178328, guid: c437d1da488aa9848872e144213e44c7, type: 3}
-  m_PrefabInstance: {fileID: 1251757604009727058}
-  m_PrefabAsset: {fileID: 0}
---- !u!43 &1269664668
+--- !u!43 &1725865086
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1172,10 +1153,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3712336707833438488, guid: 47b6a772cb073154d83bf7c14fca50c7, type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4240457267896226276, guid: 47b6a772cb073154d83bf7c14fca50c7, type: 3}
       propertyPath: m_RootOrder
       value: 3
