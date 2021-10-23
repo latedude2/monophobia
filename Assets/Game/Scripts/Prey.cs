@@ -6,11 +6,11 @@ public class Prey : MonoBehaviour {
 
     public float loneliness = 0;
     public bool alive = true;
-    private CrowdManager boidManager;
+    private CrowdManager crowdManager;
 
     // Start is called before the first frame update
     void Start() {
-        boidManager = FindObjectOfType<CrowdManager>();
+        crowdManager = FindObjectOfType<CrowdManager>();
     }
 
     // Update is called once per frame
@@ -21,8 +21,8 @@ public class Prey : MonoBehaviour {
     public void UpdateLoneliness() {
         float minDist = 0;
         float outerMost = 0;
-        foreach (Prey boid in boidManager.GetAllBoids()) {
-            float dist = Vector2.Distance((Vector2)boid.transform.position, (Vector2)transform.position);
+        foreach (Prey prey in crowdManager.GetAllPrey()) {
+            float dist = Vector2.Distance((Vector2)prey.transform.position, (Vector2)transform.position);
             if (minDist == 0) {
                 minDist = dist;
             } else if (dist < minDist && dist != 0) {
@@ -30,7 +30,7 @@ public class Prey : MonoBehaviour {
             }
             outerMost += dist;
         }
-        outerMost /= boidManager.GetAllBoids().Count;
-        loneliness = minDist * boidManager.distFactor + outerMost * boidManager.outerFactor;
+        outerMost /= crowdManager.GetAllPrey().Count;
+        loneliness = minDist * crowdManager.distFactor + outerMost * crowdManager.outerFactor;
     }
 }

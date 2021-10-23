@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CrowdManager : MonoBehaviour {
-    public GameObject boidPrefab;
+    public GameObject preyPrefab;
     public float distFactor = 1;
     public float outerFactor = 1;
 
@@ -12,50 +12,47 @@ public class CrowdManager : MonoBehaviour {
     }
 
     void Update() {
-        // foreach (Boid boid in GetAllBoids()) {
-        //     boid.UpdateLoneliness();
-        // }
-
         // Instantiate mock boids with mouse for testing purposes
-        if (boidPrefab) {
+        if (preyPrefab) {
             if (Input.GetMouseButtonDown(0)) {
                 Vector2 position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                GameObject boid = Instantiate(boidPrefab, position, Quaternion.identity);
-                boid.transform.SetParent(transform);
+                GameObject prey = Instantiate(preyPrefab, position, Quaternion.identity);
+                prey.transform.SetParent(transform);
             }
         }
     }
 
-    public List<Prey> GetAllBoids() {
+    public List<Prey> GetAllPrey() {
         Transform[] children = GetComponentsInChildren<Transform>();
         List<Prey> Out = new List<Prey>();
         foreach (Transform child in children) {
-            Prey boid;
-            if (child.TryGetComponent<Prey>(out boid)) {
+            Prey prey;
+            if (child.TryGetComponent<Prey>(out prey)) {
                 Out.Add(child.GetComponent<Prey>());
             }
         }
+        
         return Out;
     }
 
     public Prey GetMostLonely() {
-        List<Prey> boids = GetAllBoids();
-        if (boids.Count == 0) {
+        List<Prey> allPrey = GetAllPrey();
+        if (allPrey.Count == 0) {
             return null;
         }
-        var mostLonely = boids[0];
-        foreach (Prey boid in boids) {
-            if (boid.loneliness > mostLonely.loneliness) {
-                mostLonely = boid;
+        var mostLonely = allPrey[0];
+        foreach (Prey prey in allPrey) {
+            if (prey.loneliness > mostLonely.loneliness) {
+                mostLonely = prey;
             }
         }
         return mostLonely;
     }
 
     public bool TryGetMostLonely(out Prey mostLonely) {
-        Prey boid = GetMostLonely();
-        if (boid != null) {
-            mostLonely = boid;
+        Prey prey = GetMostLonely();
+        if (prey != null) {
+            mostLonely = prey;
             return true;
         } else {
             mostLonely = null;
