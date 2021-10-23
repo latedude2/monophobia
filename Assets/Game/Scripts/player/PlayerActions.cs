@@ -9,6 +9,7 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] float interactMaxDistance;
     [SerializeField] float pushForce;
     [SerializeField] float pushCooldown;
+    [SerializeField] float grabForce;
 
     bool pushReady = true;
     GameObject grabTarget = null;
@@ -25,9 +26,15 @@ public class PlayerActions : MonoBehaviour
         {
             PushEntity();
         }
+
         if (Input.GetMouseButtonDown(1))
         {
             GrabEntity();
+        }
+        HoldEntity();
+        if (Input.GetMouseButtonUp(1))
+        {
+            LetGoEntity();
         }
     }
 
@@ -92,9 +99,28 @@ public class PlayerActions : MonoBehaviour
 
     void GrabEntity()
     {
+        grabTarget = LocateActionableEntity();
+    }
+
+    void HoldEntity()
+    {
         if (grabTarget != null)
         {
+            grabTarget.GetComponent<Rigidbody2D>().AddForce((targetInteractPosition.position - grabTarget.transform.position) * grabForce * Time.deltaTime);
+        }
+        float dist = Vector3.Distance(grabTarget.transform.position, transform.position);
+        if (dist > interactMaxDistance)
+        {
+            grabTarget = null;
+        }
 
+    }
+
+    void LetGoEntity()
+    {
+        if (grabTarget != null)
+        {
+            grabTarget = null;
         }
     }
 }
