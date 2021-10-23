@@ -114,11 +114,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -243,11 +243,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -372,11 +372,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -501,11 +501,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -630,11 +630,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -816,11 +816,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -945,11 +945,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -1074,11 +1074,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -1203,11 +1203,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -1332,11 +1332,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -1461,11 +1461,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
@@ -1590,11 +1590,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 708724966
-      Data2: 1130599676
-      Data3: -768382828
-      Data4: 8080861
-    Path: event:/UI/Cancel
+      Data1: 1388782307
+      Data2: 1114298117
+      Data3: -1147200350
+      Data4: 168494046
+    Path: event:/Character/Kill
   Event: 
   PlayEvent: 2
   StopEvent: 0
