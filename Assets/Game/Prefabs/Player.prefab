@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1061887180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061887181}
+  m_Layer: 0
+  m_Name: TargetPush
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1061887181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061887180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6301632545236419754}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1251757604585178330
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd33b1e2a62d544b93a78615acb2f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 600
 --- !u!1 &2665148482818754090
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +126,7 @@ GameObject:
   - component: {fileID: 4684824171304669290}
   - component: {fileID: 5863098461796355901}
   - component: {fileID: 8692513636218792185}
+  - component: {fileID: 1244330584}
   m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
@@ -113,7 +144,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1061887181}
   m_Father: {fileID: 1251757604585178328}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -233,10 +265,10 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 40.098755
-  m_PointLightOuterAngle: 62.314117
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3.63
+  m_PointLightOuterRadius: 5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -259,3 +291,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f4cfea2a88f374d9c5cf889b177a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1244330584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2665148482818754090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7029c6e5791c66b419380cda6ebd2111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPushPosition: {fileID: 1061887181}
+  pushMaxDistance: 0.5
+  pushForce: 500
