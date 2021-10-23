@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     [SerializeField] Transform targetInteractPosition;
-    [SerializeField] float pushMaxDistance;
+    [SerializeField] float targetInteractDistance;
+    [SerializeField] float interactMaxDistance;
     [SerializeField] float pushForce;
     [SerializeField] float pushCooldown;
 
@@ -14,7 +15,7 @@ public class PlayerActions : MonoBehaviour
 
     void Start()
     {
-
+        targetInteractPosition.transform.localPosition = new Vector3(0, targetInteractDistance/2, 0);
     }
 
     void Update()
@@ -36,19 +37,27 @@ public class PlayerActions : MonoBehaviour
 
         foreach (GameObject runner in GameObject.FindGameObjectsWithTag("Runner"))
         {
-            targets.Add(runner);
+            float dist = Vector3.Distance(runner.transform.position, targetInteractPosition.position);
+            if (dist <= targetInteractDistance)
+            {
+                targets.Add(runner);
+            }
         }
         foreach (GameObject actionableObject in GameObject.FindGameObjectsWithTag("ActionableObject"))
         {
-            targets.Add(actionableObject);
+            float dist = Vector3.Distance(actionableObject.transform.position, targetInteractPosition.position);
+            if (dist <= targetInteractDistance)
+            {
+                targets.Add(actionableObject);
+            }
         }
 
         GameObject closestTargetHit = null;
         float closestTargetDist = 100;
         foreach (GameObject target in targets)
         {
-            float dist = Vector3.Distance(target.transform.position, targetInteractPosition.position);
-            if (dist <= pushMaxDistance)
+            float dist = Vector3.Distance(target.transform.position, transform.position);
+            if (dist <= interactMaxDistance)
             {
                 if (dist < closestTargetDist)
                 {

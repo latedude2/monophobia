@@ -294,7 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetInteractPosition: {fileID: 3297016296630671319}
-  pushMaxDistance: 0.5
+  targetInteractDistance: 0.6
+  interactMaxDistance: 1
   pushForce: 500
   pushCooldown: 3
 --- !u!1 &7315884492840247461
