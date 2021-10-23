@@ -255,8 +255,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 40.098755
-  m_PointLightOuterAngle: 62.314117
+  m_PointLightInnerAngle: 135
+  m_PointLightOuterAngle: 180
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 3.63
   m_ShapeLightParametricSides: 5
@@ -298,6 +298,7 @@ MonoBehaviour:
   interactMaxDistance: 1
   pushForce: 500
   pushCooldown: 3
+  grabForce: 1000
 --- !u!1 &7315884492840247461
 GameObject:
   m_ObjectHideFlags: 0
