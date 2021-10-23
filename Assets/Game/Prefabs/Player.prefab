@@ -306,3 +306,4 @@ MonoBehaviour:
   targetPushPosition: {fileID: 1061887181}
   pushMaxDistance: 0.5
   pushForce: 500
+  pushCooldown: 3

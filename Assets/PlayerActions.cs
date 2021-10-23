@@ -9,7 +9,7 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] float pushForce;
     [SerializeField] float pushCooldown;
 
-    bool pushReady;
+    bool pushReady = true;
 
     void Start()
     {
@@ -29,26 +29,46 @@ public class PlayerActions : MonoBehaviour
         }
     }
 
-    void PushEntity()
+    GameObject LocateActionableEntity()
     {
-        GameObject[] runners = GameObject.FindGameObjectsWithTag("Runner");
+        List<GameObject> targets = new List<GameObject>();
 
-        GameObject closestRunnerHit = null;
-        float closestRunnerDist = 100;
-        foreach(GameObject runner in runners)
+        foreach (GameObject runner in GameObject.FindGameObjectsWithTag("Runner"))
         {
-            float dist = Vector3.Distance(runner.transform.position, targetPushPosition.position);
+            targets.Add(runner);
+        }
+        foreach (GameObject actionableObject in GameObject.FindGameObjectsWithTag("ActionableObject"))
+        {
+            targets.Add(actionableObject);
+        }
+
+        GameObject closestTargetHit = null;
+        float closestTargetDist = 100;
+        foreach (GameObject target in targets)
+        {
+            float dist = Vector3.Distance(target.transform.position, targetPushPosition.position);
             if (dist <= pushMaxDistance)
             {
-                if (dist < closestRunnerDist)
+                if (dist < closestTargetDist)
                 {
-                    closestRunnerHit = runner;
+                    closestTargetHit = target;
                 }
             }
         }
-        if (closestRunnerHit != null)
+        if (closestTargetHit != null)
         {
-            closestRunnerHit.GetComponent<Rigidbody2D>().AddForce(transform.up * pushForce);
+            return closestTargetHit;
+        }
+        return null;
+    }
+
+    void PushEntity()
+    {
+        GameObject targetEntity = LocateActionableEntity();
+
+        if (targetEntity != null)
+        {
+            targetEntity.GetComponent<Rigidbody2D>().AddForce(transform.up * pushForce);
             StartCoroutine(PushCooldown());
         }
     }
@@ -62,6 +82,6 @@ public class PlayerActions : MonoBehaviour
 
     void GrabEntity()
     {
-
+        Debug.Log("hell");
     }
 }
