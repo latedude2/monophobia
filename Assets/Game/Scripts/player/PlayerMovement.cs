@@ -25,6 +25,6 @@ public class PlayerMovement : MonoBehaviour
             direction.Normalize();
         }
         rigidBody.AddForce(direction * speed * Time.deltaTime);
-        GetComponent<Stamina>().UseStamina((direction * speed * Time.deltaTime).magnitude);
+        //GetComponent<Stamina>().UseStamina((direction * speed * Time.deltaTime).magnitude);
     }
 }
