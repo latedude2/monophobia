@@ -5,11 +5,14 @@ using UnityEngine;
 public class PlayerActions : MonoBehaviour
 {
     [SerializeField] Transform targetInteractPosition;
+    [SerializeField] Stamina playerStamina;
     [SerializeField] float targetInteractDistance;
     [SerializeField] float interactMaxDistance;
     [SerializeField] float pushForce;
     [SerializeField] float pushCooldown;
+    [SerializeField] int pushStaminaCost;
     [SerializeField] float grabForce;
+    [SerializeField] int grabStaminaCost;
 
     bool pushReady = true;
     GameObject grabTarget = null;
@@ -22,12 +25,12 @@ public class PlayerActions : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && pushReady)
+        if (Input.GetMouseButtonDown(0) && pushReady && playerStamina.stamina >= pushStaminaCost)
         {
             PushEntity();
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && playerStamina.stamina > 0)
         {
             GrabEntity();
         }
@@ -86,6 +89,7 @@ public class PlayerActions : MonoBehaviour
         if (targetEntity != null)
         {
             targetEntity.GetComponent<Rigidbody2D>().AddForce(transform.up * pushForce);
+            playerStamina.UseStamina(pushStaminaCost);
             StartCoroutine(PushCooldown());
         }
     }
@@ -107,15 +111,14 @@ public class PlayerActions : MonoBehaviour
         if (grabTarget != null)
         {
             grabTarget.GetComponent<Rigidbody2D>().AddForce((targetInteractPosition.position - grabTarget.transform.position) * grabForce * Time.deltaTime);
-        
+            playerStamina.UseStamina(grabStaminaCost * Time.deltaTime);
+
             float dist = Vector3.Distance(grabTarget.transform.position, transform.position);
-            if (dist > interactMaxDistance)
+            if (dist > interactMaxDistance || playerStamina.stamina <= 0)
             {
                 grabTarget = null;
             }
         }
-        
-
     }
 
     void LetGoEntity()
