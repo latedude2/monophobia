@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour {
 
     void Start() {
         boidManager = FindObjectOfType<BoidManager>();
-        InvokeRepeating("AttackLoneliest", attackTime, attackTime);
+        InvokeRepeating(nameof(AttackLoneliest), attackTime, attackTime);
         _aimer = Instantiate(aimer);
     }
 
