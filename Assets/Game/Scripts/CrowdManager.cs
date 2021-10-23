@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoidManager : MonoBehaviour {
+public class CrowdManager : MonoBehaviour {
     public GameObject boidPrefab;
 
     // Start is called before the first frame update

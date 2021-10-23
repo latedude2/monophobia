@@ -6,11 +6,11 @@ public class Boid : MonoBehaviour {
 
     public float loneliness = 0;
     public bool alive = true;
-    private BoidManager boidManager;
+    private CrowdManager boidManager;
 
     // Start is called before the first frame update
     void Start() {
-        boidManager = FindObjectOfType<BoidManager>();
+        boidManager = FindObjectOfType<CrowdManager>();
     }
 
     // Update is called once per frame
