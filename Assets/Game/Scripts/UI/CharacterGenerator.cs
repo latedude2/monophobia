@@ -15,7 +15,6 @@ public class CharacterGenerator : MonoBehaviour
 
     void Start()
     {
-        showdeadCharacter();
     }
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class CharacterGenerator : MonoBehaviour
         
     }
 
-    public void showdeadCharacter() {
+    public void showDeadCharacter() {
         Object[] RandomImages = Resources.LoadAll("Sprites/character_faces", typeof(Sprite));
         Sprite RandomImage = (Sprite)RandomImages[Random.Range(0, 68)];
 
@@ -40,11 +39,19 @@ public class CharacterGenerator : MonoBehaviour
         }
 
         if (RandomImage.name.Contains("a")) {
-           Age = Random.Range(20, 60).ToString();
+            if (RandomImage.name.Contains("y")) {
+                Age = Random.Range(21, 39).ToString();
+            } else if (RandomImage.name.Contains("o")) {
+                Age = Random.Range(40, 60).ToString();
+            }
            Occupation = Professions[Random.Range(0, Professions.Count - 1)];
            LastWords = AdultLastWords[Random.Range(0, AdultLastWords.Count - 1)];
         } else if (RandomImage.name.Contains("c")) {
-            Age = Random.Range(3, 10).ToString();
+            if (RandomImage.name.Contains("y")) {
+                Age = Random.Range(3, 5).ToString();
+            } else if (RandomImage.name.Contains("o")) {
+                Age = Random.Range(6, 11).ToString();
+            }
            Occupation = ChildActivities[Random.Range(0, ChildActivities.Count - 1)];
            LastWords = ChildLastWords[Random.Range(0, ChildLastWords.Count - 1)];
         }
