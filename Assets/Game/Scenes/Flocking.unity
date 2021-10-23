@@ -565,11 +565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b4809a85f82db43bae316408eef26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 6774084941046023174, guid: fd60dcd3f417deb40b12ef2c910f16e9, type: 3}
+  agentPrefab: {fileID: -8652644607391149699, guid: fd60dcd3f417deb40b12ef2c910f16e9, type: 3}
   behavior: {fileID: 11400000, guid: e276675161d7b784583f2e3a237c2cc4, type: 2}
   startingSize: 5
   driveFactor: 2
-  maxSpeed: 5
+  maxSpeed: 3
   neighborRadius: 1.5
   avoidanceRadiusMultiplier: 0.5
 --- !u!4 &1590661092

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerControls : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] int speed;
     private Rigidbody2D rigidBody;
@@ -13,6 +13,11 @@ public class playerControls : MonoBehaviour
     }
 
     void Update()
+    {
+        Walk();
+    }
+
+    void Walk()
     {
         var direction = transform.up * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
         if (direction.magnitude > 1.0f)
