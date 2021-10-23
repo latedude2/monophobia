@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 292316067377519942}
   - component: {fileID: 292316067377519943}
   - component: {fileID: 4751194203435640509}
+  - component: {fileID: -8652644607391149699}
   m_Layer: 0
   m_Name: Entity
   m_TagString: Runner
@@ -137,9 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
   m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
+  m_UseRendererSilhouette: 0
   m_CastsShadows: 1
-  m_SelfShadows: 1
+  m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
   - {x: -0.37874043, y: -0.3358792, z: 0}
@@ -161,4 +162,16 @@ MonoBehaviour:
   - {x: -0.2443074, y: -0.453645, z: 0}
   m_ShapePathHash: 425462886
   m_Mesh: {fileID: 0}
-  m_InstanceId: 44680
+  m_InstanceId: 54262
+--- !u!114 &-8652644607391149699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292316067377519992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828967f610ee5374fb1786c0c3540360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
