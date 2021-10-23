@@ -6,9 +6,11 @@ public class CrowdManager : MonoBehaviour {
     public GameObject preyPrefab;
     public float distFactor = 1;
     public float outerFactor = 1;
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start() {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update() {
@@ -31,7 +33,9 @@ public class CrowdManager : MonoBehaviour {
                 Out.Add(child.GetComponent<Prey>());
             }
         }
-        
+        if (player.TryGetComponent<Prey>(out Prey playerPrey)) {
+            Out.Add(playerPrey);
+        }
         return Out;
     }
 
