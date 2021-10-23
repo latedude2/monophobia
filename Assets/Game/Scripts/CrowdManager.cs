@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CrowdManager : MonoBehaviour {
     public GameObject boidPrefab;
+    public float distFactor = 1;
+    public float outerFactor = 1;
 
     // Start is called before the first frame update
     void Start() {
     }
 
     void Update() {
-        foreach (Boid boid in GetAllBoids()) {
-            boid.UpdateLoneliness();
-        }
+        // foreach (Boid boid in GetAllBoids()) {
+        //     boid.UpdateLoneliness();
+        // }
 
         // Instantiate mock boids with mouse for testing purposes
         if (boidPrefab) {
@@ -24,25 +26,25 @@ public class CrowdManager : MonoBehaviour {
         }
     }
 
-    public List<Boid> GetAllBoids() {
+    public List<Prey> GetAllBoids() {
         Transform[] children = GetComponentsInChildren<Transform>();
-        List<Boid> Out = new List<Boid>();
+        List<Prey> Out = new List<Prey>();
         foreach (Transform child in children) {
-            Boid boid;
-            if (child.TryGetComponent<Boid>(out boid)) {
-                Out.Add(child.GetComponent<Boid>());
+            Prey boid;
+            if (child.TryGetComponent<Prey>(out boid)) {
+                Out.Add(child.GetComponent<Prey>());
             }
         }
         return Out;
     }
 
-    public Boid GetMostLonely() {
-        List<Boid> boids = GetAllBoids();
+    public Prey GetMostLonely() {
+        List<Prey> boids = GetAllBoids();
         if (boids.Count == 0) {
             return null;
         }
         var mostLonely = boids[0];
-        foreach (Boid boid in boids) {
+        foreach (Prey boid in boids) {
             if (boid.loneliness > mostLonely.loneliness) {
                 mostLonely = boid;
             }
@@ -50,8 +52,8 @@ public class CrowdManager : MonoBehaviour {
         return mostLonely;
     }
 
-    public bool TryGetMostLonely(out Boid mostLonely) {
-        Boid boid = GetMostLonely();
+    public bool TryGetMostLonely(out Prey mostLonely) {
+        Prey boid = GetMostLonely();
         if (boid != null) {
             mostLonely = boid;
             return true;

@@ -20,13 +20,13 @@ public class Enemy : MonoBehaviour {
     }
 
     void Hunt() {
-        if (crowdManager.TryGetMostLonely(out Boid target)) {
+        if (crowdManager.TryGetMostLonely(out Prey target)) {
             _aimer.transform.position = target.transform.position;
         }
     }
 
     void AttackLoneliest() {
-        if (crowdManager.TryGetMostLonely(out Boid target)) {
+        if (crowdManager.TryGetMostLonely(out Prey target)) {
             Destroy(target.gameObject);
         }
     }
