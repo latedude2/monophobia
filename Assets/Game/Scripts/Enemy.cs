@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
     public GameObject aimer;
     private GameObject _aimer;
     CrowdManager crowdManager;
+    public CharacterGenerator charGen;
     [SerializeField] [Min(0.001f)] private float attackTime = 1;
 
     void Start() {
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour {
     void AttackLoneliest() {
         if (crowdManager.TryGetMostLonely(out Prey target)) {
             Destroy(target.gameObject);
-
+            charGen.showDeadCharacter();
         }
     }
 }
