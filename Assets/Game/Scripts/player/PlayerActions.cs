@@ -107,12 +107,14 @@ public class PlayerActions : MonoBehaviour
         if (grabTarget != null)
         {
             grabTarget.GetComponent<Rigidbody2D>().AddForce((targetInteractPosition.position - grabTarget.transform.position) * grabForce * Time.deltaTime);
+        
+            float dist = Vector3.Distance(grabTarget.transform.position, transform.position);
+            if (dist > interactMaxDistance)
+            {
+                grabTarget = null;
+            }
         }
-        float dist = Vector3.Distance(grabTarget.transform.position, transform.position);
-        if (dist > interactMaxDistance)
-        {
-            grabTarget = null;
-        }
+        
 
     }
 
