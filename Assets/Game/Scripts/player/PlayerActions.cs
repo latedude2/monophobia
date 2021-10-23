@@ -71,6 +71,7 @@ public class PlayerActions : MonoBehaviour
             {
                 if (dist < closestTargetDist)
                 {
+                    closestTargetDist = dist;
                     closestTargetHit = target;
                 }
             }

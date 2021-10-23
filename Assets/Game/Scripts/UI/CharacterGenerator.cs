@@ -15,7 +15,6 @@ public class CharacterGenerator : MonoBehaviour
 
     void Start()
     {
-        showdeadCharacter();
     }
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class CharacterGenerator : MonoBehaviour
         
     }
 
-    public void showdeadCharacter() {
+    public void showDeadCharacter() {
         Object[] RandomImages = Resources.LoadAll("Sprites/character_faces", typeof(Sprite));
         Sprite RandomImage = (Sprite)RandomImages[Random.Range(0, 68)];
 
