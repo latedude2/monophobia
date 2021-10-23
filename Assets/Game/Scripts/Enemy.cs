@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour {
     void AttackLoneliest() {
         if (boidManager.TryGetMostLonely(out Boid target)) {
             Destroy(target.gameObject);
+
         }
     }
 }
