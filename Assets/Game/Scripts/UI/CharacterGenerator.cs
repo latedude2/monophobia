@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Character {
-
-}
-
 public class CharacterGenerator : MonoBehaviour
 {
-    private Character character;
     // Start is called before the first frame update
     public List<string> FemaleNames = new List<string>(){ "Olivia", "Emma", "Ava", "Charlotte", "Sophia", "Amelia", "Isabella", "Mia", "Evelyn", "Harper", "Camila", "Gianna", "Abigail", "Luna", "Ella", "Elizabeth", "Sofia", "Emily", "Avery", "Mila", "Scarlett", "Eleanor", "Madison", "Layla", "Penelope", "Aria", "Chloe", "Grace", "Ellie", "Nora", "Hazel", "Zoey", "Riley", "Victoria", "Lily", "Aurora", "Violet", "Nova", "Hannah", "Emilia", "Zoe", "Stella", "Everly", "Isla", "Leah", "Lillian", "Addison", "Willow", "Lucy", "Paisley", "Natalie", "Naomi", "Eliana", "Brooklyn", "Elena", "Aubrey", "Claire", "Ivy", "Kinsley", "Audrey", "Maya", "Genesis", "Skylar", "Bella", "Aaliyah", "Madelyn", "Savannah", "Anna", "Delilah", "Serenity", "Caroline", "Kennedy", "Valentina", "Sophie", "Alice", "Gabriella", "Sadie", "Ariana", "Allison", "Hailey", "Autumn", "Nevaeh", "Natalia", "Quinn", "Josephine", "Sarah", "Cora", "Emery", "Samantha", "Piper", "Leilani", "Eva", "Everleigh", "Madeline", "Lydia", "Jade", "Kasia", "Anastazja", "Lina", "Dovile" };
     public List<string> MaleNames = new List<string>(){ "Liam", "Noah", "Oliver", "Elijah", "William", "James", "Benjamin", "Lucas", "Henry", "Alexander", "Mason", "Michael", "Ethan", "Daniel", "Jacob", "Logan", "Jackson", "Levi", "Sebastian", "Mateo", "Jack", "Owen", "Theodore", "Aiden", "Samuel", "Joseph", "John", "David", "Wyatt", "Matthew", "Luke", "Asher", "Carter", "Julian", "Grayson", "Leo", "Jayden", "Gabriel", "Isaac", "Lincoln", "Anthony", "Hudson", "Dylan", "Ezra", "Thomas", "Charles", "Christopher", "Jaxon", "Maverick", "Josiah", "Isaiah", "Andrew", "Elias", "Joshua", "Nathan", "Caleb", "Ryan", "Adrian", "Miles", "Eli", "Nolan", "Christian", "Aaron", "Cameron", "Ezekiel", "Colton", "Luca", "Landon", "Hunter", "Jonathan", "Santiago", "Axel", "Easton", "Cooper", "Jeremiah", "Angel", "Roman", "Connor", "Jameson", "Robert", "Greyson", "Jordan", "Ian", "Carson", "Jaxson", "Leonardo", "Nicholas", "Dominic", "Austin", "Everett", "Brooks", "Xavier", "Kai", "Jose", "Parker", "Adam", "Jace", "Wesley", "Kayden", "Mikkel", "Abderrahman", "Simonas", "David", "Kristinn" };
@@ -20,6 +15,7 @@ public class CharacterGenerator : MonoBehaviour
 
     void Start()
     {
+        showdeadCharacter();
     }
 
     // Update is called once per frame
@@ -28,8 +24,10 @@ public class CharacterGenerator : MonoBehaviour
         
     }
 
-    void showdeadCharacter() {
-        Sprite RandomImage = new ArrayList(Resources.LoadAll<Sprite>("/Sprites/character_faces"))[Random.Range(0, 69)] as Sprite;
+    public void showdeadCharacter() {
+        Object[] RandomImages = Resources.LoadAll("Sprites/character_faces", typeof(Sprite));
+        Sprite RandomImage = (Sprite)RandomImages[Random.Range(0, 68)];
+
         string CharacterName = "";
         string Age = "";
         string Occupation = "";
@@ -43,19 +41,19 @@ public class CharacterGenerator : MonoBehaviour
 
         if (RandomImage.name.Contains("a")) {
            Age = Random.Range(20, 60).ToString();
-           Occupation = Professions[Random.Range(0, Professions.Count)];
-           LastWords = AdultLastWords[Random.Range(0, AdultLastWords.Count)];
+           Occupation = Professions[Random.Range(0, Professions.Count - 1)];
+           LastWords = AdultLastWords[Random.Range(0, AdultLastWords.Count - 1)];
         } else if (RandomImage.name.Contains("c")) {
             Age = Random.Range(3, 10).ToString();
-           Occupation = ChildActivities[Random.Range(0, ChildActivities.Count)];
-           LastWords = ChildLastWords[Random.Range(0, ChildLastWords.Count)];
+           Occupation = ChildActivities[Random.Range(0, ChildActivities.Count - 1)];
+           LastWords = ChildLastWords[Random.Range(0, ChildLastWords.Count - 1)];
         }
 
         gameObject.transform.Find("Name").GetComponent<Text>().text = CharacterName;
         gameObject.transform.Find("Age").GetComponent<Text>().text = Age;
         gameObject.transform.Find("Occupation").GetComponent<Text>().text = Occupation;
-        gameObject.transform.Find("LastWords").GetComponent<Text>().text = LastWords;
-        gameObject.GetComponent<Image>().sprite = RandomImage;
+        gameObject.transform.Find("LastWords").GetComponent<Text>().text = '"' + LastWords + '"';
+        gameObject.transform.Find("Image").GetComponent<Image>().sprite = RandomImage;
 
     }
 }
