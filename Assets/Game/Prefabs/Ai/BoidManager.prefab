@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6997376249799785155}
   - component: {fileID: 6997376249799785154}
-  - component: {fileID: 8893305918087945141}
+  - component: {fileID: 589790238}
   m_Layer: 0
   m_Name: BoidManager
   m_TagString: Untagged
@@ -47,7 +47,7 @@ MonoBehaviour:
   preyPrefab: {fileID: 292316067377519992, guid: fd60dcd3f417deb40b12ef2c910f16e9, type: 3}
   distFactor: 1
   outerFactor: 1
---- !u!114 &8893305918087945141
+--- !u!114 &589790238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
