@@ -56,9 +56,7 @@ public class CharacterGenerator : MonoBehaviour
            LastWords = ChildLastWords[Random.Range(0, ChildLastWords.Count - 1)];
         }
 
-        gameObject.transform.Find("Name").GetComponent<Text>().text = CharacterName;
-        gameObject.transform.Find("Age").GetComponent<Text>().text = Age;
-        gameObject.transform.Find("Occupation").GetComponent<Text>().text = Occupation;
+        gameObject.transform.Find("Bio").GetComponent<Text>().text = CharacterName + ", " + Age + ", " + Occupation;
         gameObject.transform.Find("LastWords").GetComponent<Text>().text = '"' + LastWords + '"';
         gameObject.transform.Find("Image").GetComponent<Image>().sprite = RandomImage;
 
