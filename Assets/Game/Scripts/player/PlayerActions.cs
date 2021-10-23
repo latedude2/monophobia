@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class PlayerActions : MonoBehaviour
 {
-    [SerializeField] Transform targetPushPosition;
+    [SerializeField] Transform targetInteractPosition;
     [SerializeField] float pushMaxDistance;
     [SerializeField] float pushForce;
     [SerializeField] float pushCooldown;
 
     bool pushReady = true;
+    GameObject grabTarget = null;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class PlayerActions : MonoBehaviour
         float closestTargetDist = 100;
         foreach (GameObject target in targets)
         {
-            float dist = Vector3.Distance(target.transform.position, targetPushPosition.position);
+            float dist = Vector3.Distance(target.transform.position, targetInteractPosition.position);
             if (dist <= pushMaxDistance)
             {
                 if (dist < closestTargetDist)
@@ -82,7 +83,9 @@ public class PlayerActions : MonoBehaviour
 
     void GrabEntity()
     {
+        if (grabTarget != null)
+        {
 
-        Debug.Log("hell");
+        }
     }
 }

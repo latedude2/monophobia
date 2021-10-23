@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7029c6e5791c66b419380cda6ebd2111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPushPosition: {fileID: 3297016296630671319}
+  targetInteractPosition: {fileID: 3297016296630671319}
   pushMaxDistance: 0.5
   pushForce: 500
   pushCooldown: 3
