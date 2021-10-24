@@ -112,7 +112,7 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
+  m_XDamping: 2.5
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
@@ -327,7 +327,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6882353, y: 1}
+    m_SensorSize: {x: 1.7766497, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

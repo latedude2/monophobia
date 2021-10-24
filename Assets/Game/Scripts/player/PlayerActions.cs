@@ -13,24 +13,26 @@ public class PlayerActions : MonoBehaviour
     [SerializeField] int pushStaminaCost;
     [SerializeField] float grabForce;
     [SerializeField] int grabStaminaCost;
+    Animator animator;
 
     bool pushReady = true;
     GameObject grabTarget = null;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         targetInteractPosition.transform.localPosition = new Vector3(0, targetInteractDistance/2, 0);
     }
 
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && pushReady && playerStamina.stamina >= pushStaminaCost)
+        if (Input.GetMouseButtonDown(0) && pushReady && playerStamina.stamina >= pushStaminaCost && !playerStamina.tired)
         {
             PushEntity();
         }
 
-        if (Input.GetMouseButtonDown(1) && playerStamina.stamina > 0)
+        if (Input.GetMouseButtonDown(1) && playerStamina.stamina > 0 && !playerStamina.tired)
         {
             GrabEntity();
         }
@@ -91,6 +93,8 @@ public class PlayerActions : MonoBehaviour
         {
             targetEntity.GetComponent<Rigidbody2D>().AddForce(transform.up * pushForce);
             playerStamina.UseStamina(pushStaminaCost);
+            if(animator.GetCurrentAnimatorClipInfo(0).Length > 0 && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "PushingWalking")
+                animator.Play("PushingWalking");
             StartCoroutine(PushCooldown());
         }
     }

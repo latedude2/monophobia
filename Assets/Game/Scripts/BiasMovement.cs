@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BiasMovement : MonoBehaviour
 {
+    private void Start() {
+        GetComponent<Animator>().Play("Walking");
+    }
 
     [SerializeField] private float y = 3f;
     [SerializeField] private float x = 2f;
