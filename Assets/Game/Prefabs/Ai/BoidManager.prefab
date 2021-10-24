@@ -60,4 +60,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimer: {fileID: 8894146219027852111, guid: e5d1b7e5c9e6a4c529debef19b618d7b, type: 3}
+  charGen: {fileID: 0}
   attackTime: 5
