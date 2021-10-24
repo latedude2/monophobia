@@ -14,11 +14,14 @@ public class BackgroundSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach(GameObject backgroundPatch in backgroundPatches)
+        if(player != null)
         {
-            if(backgroundPatch.transform.position.x + 15f < player.transform.position.x)
+            foreach(GameObject backgroundPatch in backgroundPatches)
             {
-                backgroundPatch.GetComponent<Background>().Move(distanceAhead);
+                if(backgroundPatch.transform.position.x + 15f < player.transform.position.x)
+                {
+                    backgroundPatch.GetComponent<Background>().Move(distanceAhead);
+                }
             }
         }
     }
