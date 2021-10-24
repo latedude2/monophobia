@@ -9,6 +9,8 @@ public class ObjectInitializer : MonoBehaviour
 
     public GameObject[] respawns;
 
+    public GameObject road;
+
     GameObject[] ObjectsWithRespawn;
 
     GameObject[] GameObjectsFindRespawn()
@@ -39,6 +41,14 @@ public class ObjectInitializer : MonoBehaviour
 
     }
 
+    float RoadWidth()
+    {
+        RectTransform rt = (RectTransform)road.transform;
+        float width;
+        width = rt.rect.width;
+        return width;
+
+    }
     void DistanceAndInitialize(Vector2[] gameObjectsPositions, Vector2 playerPosition)
     {
         float distance;
@@ -47,7 +57,9 @@ public class ObjectInitializer : MonoBehaviour
         {
             distance = Vector2.Distance(gameObjectsPositions[i], playerPosition);
             
-            if(distance > )
+            if(distance < RoadWidth() && gameObjectsPositions[i].position)
+
+            
         }
 
 
@@ -57,7 +69,7 @@ public class ObjectInitializer : MonoBehaviour
 
     void DespawnGameObject()
     {
-
+        
     }
 
     Vector2[] GameObjectsPositions(GameObject[] ObjectsWithRespawn)
