@@ -21,12 +21,14 @@ public class CrowdManager : MonoBehaviour {
 
     void Update() {
         // Instantiate mock boids with mouse for testing purposes
+        /*
         if (preyPrefab) {
             if (Input.GetMouseButtonDown(0)) {
                 Vector2 position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 SpawnCrowd(10, position, 2);
             }
         }
+        */
     }
 
     public List<Prey> GetAllPrey() {

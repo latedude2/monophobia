@@ -33,6 +33,9 @@
 		<relationship name="timeline">
 			<destination>{27c1a22b-d7d5-442c-a0fe-82197abe83d8}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{0dd0c726-3c90-4a08-8208-434f44efb6e6}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{561cd480-bd2b-4c2e-b919-d775f9c4f409}</destination>
 		</relationship>
@@ -78,7 +81,7 @@
 	</object>
 	<object class="GroupTrack" id="{3afd76a0-8c2c-4546-8236-e61efa351628}">
 		<relationship name="modules">
-			<destination>{ef076bbc-92b8-4757-a448-0c79cfbb26b5}</destination>
+			<destination>{674dae7d-3d4d-4c12-a85e-322b088d21dc}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f9caa0ec-97cb-4717-82fc-45cda24c017f}</destination>
@@ -88,7 +91,12 @@
 		<relationship name="modules">
 			<destination>{ab4fff5f-e11d-4734-b774-3644fd7ec432}</destination>
 			<destination>{cc2c6e63-b2c8-4520-9039-76ce81a5ee18}</destination>
-			<destination>{ef076bbc-92b8-4757-a448-0c79cfbb26b5}</destination>
+			<destination>{674dae7d-3d4d-4c12-a85e-322b088d21dc}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{0dd0c726-3c90-4a08-8208-434f44efb6e6}">
+		<relationship name="preset">
+			<destination>{897fdc62-7580-4ad1-9368-9e9aad8a057b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{00b964d7-f8fe-44a5-a357-655bf981319a}">
@@ -157,12 +165,21 @@
 			<destination>{00b964d7-f8fe-44a5-a357-655bf981319a}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{ef076bbc-92b8-4757-a448-0c79cfbb26b5}">
+	<object class="SingleSound" id="{674dae7d-3d4d-4c12-a85e-322b088d21dc}">
+		<property name="start">
+			<value>0.15625</value>
+		</property>
 		<property name="length">
-			<value>0.87501133786848073</value>
+			<value>0.75</value>
+		</property>
+		<property name="volume">
+			<value>-8</value>
+		</property>
+		<property name="pitch">
+			<value>-6</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{5ff7bb85-2612-460b-a6e7-8e652a2e3473}</destination>
+			<destination>{a506c24e-4ba7-4119-852c-e0e1c9d14a75}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{f9caa0ec-97cb-4717-82fc-45cda24c017f}">
