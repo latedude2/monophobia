@@ -213,6 +213,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e510fb0dd8a08c640a26b9342095fa51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstaclePrefabs:
+  - {fileID: 7313958953691933649, guid: 55e3c3aa6c0c76347b34d6c99b07bb14, type: 3}
+  - {fileID: 7313958953691933649, guid: a0d21e692ea969a4e970487f1e1dff59, type: 3}
+  - {fileID: 7313958953691933649, guid: 6ad522b2e52df1c4d8e0a75f9c68b9ff, type: 3}
+  - {fileID: 7313958953691933649, guid: 6ddcefc2169d6b440823136636616923, type: 3}
+  - {fileID: 7313958953691933649, guid: dca9d445cbdb013458e4789e401d2a4d, type: 3}
+  - {fileID: 7313958953691933649, guid: 90322a248a7dd204cb8d2c9e9fe15289, type: 3}
+  - {fileID: 7313958953691933649, guid: 59f4331afd6f5a04a859abbd416e2016, type: 3}
+  - {fileID: 7313958953691933649, guid: 61c4905059384a246b220060c055ea6f, type: 3}
+  - {fileID: 7313958953691933649, guid: cc6140c420a1f10429c355bcc7272261, type: 3}
+  - {fileID: 7313958953691933649, guid: 18b904a73f44cf24fb4e0c71e09a7449, type: 3}
+  - {fileID: 7313958953691933649, guid: ccbf15a156d560641b80f61a13779d1b, type: 3}
+  bloodPrefabs:
+  - {fileID: 8111299639084631161, guid: 0a6f3970b0981b5428cfadaa9b5d218a, type: 3}
+  - {fileID: 5308176877695270823, guid: 6a6d5bb1a28298e408c95d85938b27f0, type: 3}
+  - {fileID: 7731480585741225018, guid: 9131fdb6e43c47543affd9086fa81366, type: 3}
+  obstacleCount: 3
+  bloodCount: 20
 --- !u!1 &6915454366324656700
 GameObject:
   m_ObjectHideFlags: 0
