@@ -12,7 +12,7 @@ public class BackgroundSpawner : MonoBehaviour
     float distanceAhead = 30f;
     
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         foreach(GameObject backgroundPatch in backgroundPatches)
         {
