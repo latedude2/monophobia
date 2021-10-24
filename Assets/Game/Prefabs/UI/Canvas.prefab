@@ -271,9 +271,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 3460922388774784492}
     m_Modifications:
     - target: {fileID: 479097782833292670, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479097782833292670, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e615019cc9381604bacfcc14fb4e572e, type: 3}
+      objectReference: {fileID: 21300000, guid: 8227c7c2a10fec94b9f1ec952c7d925a, type: 3}
     - target: {fileID: 2161258709726887459, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
       propertyPath: m_Name
       value: DeathInfo
@@ -400,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129788877354527421, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
       propertyPath: m_Text
-      value: Johny, 37, nurse
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7129788877354527421, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
       propertyPath: m_FontData.m_Font
@@ -433,6 +437,10 @@ PrefabInstance:
     - target: {fileID: 8682455875462696020, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -21.267017
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081850623230214975, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9081850623230214975, guid: 2d4dd4f3e702bb940b599b4025add273, type: 3}
       propertyPath: m_FontData.m_Font
