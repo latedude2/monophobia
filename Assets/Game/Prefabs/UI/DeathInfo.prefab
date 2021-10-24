@@ -1,84 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2046703387938261366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 668734089908499962}
-  - component: {fileID: 3512331202831649862}
-  - component: {fileID: 1814383993498436891}
-  m_Layer: 5
-  m_Name: Occupation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &668734089908499962
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046703387938261366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6101702913999942723}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.40367, y: 2.594}
-  m_SizeDelta: {x: 87.7328, y: 41.402}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3512331202831649862
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046703387938261366}
-  m_CullTransparentMesh: 1
---- !u!114 &1814383993498436891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046703387938261366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Occupation: blablablabla'
 --- !u!1 &2161258709726887459
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,8 +32,6 @@ RectTransform:
   m_Children:
   - {fileID: 2421288791610122128}
   - {fileID: 4101358477756526328}
-  - {fileID: 8988308353956648315}
-  - {fileID: 668734089908499962}
   - {fileID: 8682455875462696020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -172,6 +91,376 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc6331ebf521f74b852288f30eb938d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FemaleNames:
+  - Olivia
+  - Emma
+  - Ava
+  - Charlotte
+  - Sophia
+  - Amelia
+  - Isabella
+  - Mia
+  - Evelyn
+  - Harper
+  - Camila
+  - Gianna
+  - Abigail
+  - Luna
+  - Ella
+  - Elizabeth
+  - Sofia
+  - Emily
+  - Avery
+  - Mila
+  - Scarlett
+  - Eleanor
+  - Madison
+  - Layla
+  - Penelope
+  - Aria
+  - Chloe
+  - Grace
+  - Ellie
+  - Nora
+  - Hazel
+  - Zoey
+  - Riley
+  - Victoria
+  - Lily
+  - Aurora
+  - Violet
+  - Nova
+  - Hannah
+  - Emilia
+  - Zoe
+  - Stella
+  - Everly
+  - Isla
+  - Leah
+  - Lillian
+  - Addison
+  - Willow
+  - Lucy
+  - Paisley
+  - Natalie
+  - Naomi
+  - Eliana
+  - Brooklyn
+  - Elena
+  - Aubrey
+  - Claire
+  - Ivy
+  - Kinsley
+  - Audrey
+  - Maya
+  - Genesis
+  - Skylar
+  - Bella
+  - Aaliyah
+  - Madelyn
+  - Savannah
+  - Anna
+  - Delilah
+  - Serenity
+  - Caroline
+  - Kennedy
+  - Valentina
+  - Sophie
+  - Alice
+  - Gabriella
+  - Sadie
+  - Ariana
+  - Allison
+  - Hailey
+  - Autumn
+  - Nevaeh
+  - Natalia
+  - Quinn
+  - Josephine
+  - Sarah
+  - Cora
+  - Emery
+  - Samantha
+  - Piper
+  - Leilani
+  - Eva
+  - Everleigh
+  - Madeline
+  - Lydia
+  - Jade
+  - Kasia
+  - Anastazja
+  - Lina
+  - Dovile
+  MaleNames:
+  - Liam
+  - Noah
+  - Oliver
+  - Elijah
+  - William
+  - James
+  - Benjamin
+  - Lucas
+  - Henry
+  - Alexander
+  - Mason
+  - Michael
+  - Ethan
+  - Daniel
+  - Jacob
+  - Logan
+  - Jackson
+  - Levi
+  - Sebastian
+  - Mateo
+  - Jack
+  - Owen
+  - Theodore
+  - Aiden
+  - Samuel
+  - Joseph
+  - John
+  - David
+  - Wyatt
+  - Matthew
+  - Luke
+  - Asher
+  - Carter
+  - Julian
+  - Grayson
+  - Leo
+  - Jayden
+  - Gabriel
+  - Isaac
+  - Lincoln
+  - Anthony
+  - Hudson
+  - Dylan
+  - Ezra
+  - Thomas
+  - Charles
+  - Christopher
+  - Jaxon
+  - Maverick
+  - Josiah
+  - Isaiah
+  - Andrew
+  - Elias
+  - Joshua
+  - Nathan
+  - Caleb
+  - Ryan
+  - Adrian
+  - Miles
+  - Eli
+  - Nolan
+  - Christian
+  - Aaron
+  - Cameron
+  - Ezekiel
+  - Colton
+  - Luca
+  - Landon
+  - Hunter
+  - Jonathan
+  - Santiago
+  - Axel
+  - Easton
+  - Cooper
+  - Jeremiah
+  - Angel
+  - Roman
+  - Connor
+  - Jameson
+  - Robert
+  - Greyson
+  - Jordan
+  - Ian
+  - Carson
+  - Jaxson
+  - Leonardo
+  - Nicholas
+  - Dominic
+  - Austin
+  - Everett
+  - Brooks
+  - Xavier
+  - Kai
+  - Jose
+  - Parker
+  - Adam
+  - Jace
+  - Wesley
+  - Kayden
+  - Mikkel
+  - Abderrahman
+  - Simonas
+  - David
+  - Kristinn
+  Professions:
+  - accountant
+  - actor
+  - animator
+  - architect
+  - baker
+  - biologist
+  - builder
+  - butcher
+  - career counselor
+  - nursing home caretaker
+  - comic book writer
+  - ceo of a big company
+  - programmer
+  - chef
+  - decorator
+  - dentist
+  - designer
+  - director
+  - doctor
+  - economist
+  - editor
+  - electrician
+  - engineer
+  - executive
+  - farmer
+  - film director
+  - fisherman
+  - flight attendant
+  - garbage collector
+  - geologist
+  - hairdresser
+  - head teacher
+  - jeweler
+  - journalist
+  - judge
+  - lawyer
+  - lecturer
+  - library assistant
+  - makeup artist
+  - manager
+  - miner
+  - musician
+  - nurse
+  - optician
+  - painter
+  - personal assistant
+  - photographer
+  - pilot
+  - plumber
+  - police officer
+  - politician
+  - porter
+  - printer
+  - prison officer
+  - professional gambler
+  - receptionist
+  - sailor
+  - stay at home parent
+  - salesperson
+  - scientist
+  - secretary
+  - shop assistant
+  - sign language Interpreter
+  - singer
+  - soldier
+  - solicitor
+  - surgeon
+  - tailor
+  - teacher
+  - translator
+  - travel agent
+  - trucker
+  - TV cameraman
+  - TV presenter
+  - vet
+  - waiter
+  - web designer
+  - writer
+  - game developer
+  ChildActivities:
+  - accountant for teddy bears
+  - actor in school play
+  - dollhouse architect
+  - sand cake baker
+  - little biologist
+  - lego builder
+  - spiderman fan
+  - teddybear doctor
+  - cartoon binge-watcher
+  - goldfish owner
+  - mommy's hairdresser
+  - teddybear teacher
+  - juggler
+  - daddy's assistant
+  - little wizard
+  - ukulele player
+  - nurse for dolls
+  - finger-painter
+  - frog photographer
+  - pretend police officer
+  - little chemist
+  - mommy's assistant
+  - nursery rhymes singer
+  - tinsoldier owner
+  - teddybear surgeon
+  - doll's tailor
+  - translator from imaginary language
+  - batman fan
+  - hamsters owner
+  - fairytales writer
+  - imaginary friend's caretaker
+  - video game player
+  AdultLastWords:
+  - Please don't
+  - I'm not ready
+  - I'm too young to die
+  - I'm so cold
+  - Tell my mom I love her
+  - Don't let me go like this
+  - Why didn't you save me?
+  - I will never forgive you
+  - I did not deserve this!
+  - No, not like this
+  - Dad, I'm coming
+  - I'm gonna see Jesus
+  - Goodnight
+  - I don't want to die
+  - Don't let them take me
+  - Where are they taking me
+  - Oh my God it hurts so much
+  - They took my legs! Where are my legs?!
+  - I can't breathe
+  - Who turned the lights off?
+  - God help me!
+  - Goodbye honey, I'll see you later
+  - I can hear the rain
+  - Don't leave me alone
+  - I was supposed to go skiing today
+  ChildLastWords:
+  - Please help me
+  - Where is my mommy?
+  - Auuuuchie, it hurts!
+  - It's very cold
+  - I want my daddy
+  - Aaaaaaaaaaaaa!
+  - Save me!
+  - Nooooooooo
+  - Mommy where are you?
+  - Mommy, I peed my pants!
+  - Is this mister Jesus?
+  - I don't want to die
+  - Don't let them take me
+  - What is happening?
+  - Dear God please help!
+  - They took my teddybear!
+  - Whyyyyy?
+  - I'm so sleepy...
+  - Mommy why are you crying?
+  - Take me, not my sister!
+  - I'm scared
+  - Don't leave me here
+  - Is it because I didn't go to the church?
+  - 
 --- !u!1 &2942417435792980309
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +566,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6101702913999942723}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -405,82 +694,3 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Name: blablabla'
---- !u!1 &5521466536293136777
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8988308353956648315}
-  - component: {fileID: 2642052312586414265}
-  - component: {fileID: 1875652654938365648}
-  m_Layer: 5
-  m_Name: Age
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8988308353956648315
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521466536293136777}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6101702913999942723}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.40367, y: 32.28725}
-  m_SizeDelta: {x: 87.7328, y: 17.9854}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &2642052312586414265
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521466536293136777}
-  m_CullTransparentMesh: 1
---- !u!114 &1875652654938365648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521466536293136777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Age: 69'
