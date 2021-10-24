@@ -314,6 +314,7 @@
 	<object class="MixerBusEffectChain" id="{db51b8ca-e5f8-4a1f-a54a-701640a8e8d1}">
 		<relationship name="effects">
 			<destination>{05e7014f-0348-449f-b784-95dcc57ad6c6}</destination>
+			<destination>{e1ed561c-4942-43d4-b6ea-28d15c8a889c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{567b8688-15d8-4fd7-86be-fc6c25bd7e57}" />
@@ -381,6 +382,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{c70f8351-980f-4484-96bd-9ac0a55e4174}" />
 	<object class="MixerBusFader" id="{05e7014f-0348-449f-b784-95dcc57ad6c6}" />
+	<object class="SFXReverbEffect" id="{e1ed561c-4942-43d4-b6ea-28d15c8a889c}">
+		<property name="decayTime">
+			<value>220</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{924f0414-5595-4e23-bbb1-d049a7fcacb9}" />
 	<object class="AutomationCurve" id="{a20596af-c58b-4776-b2d6-aefc55eeac93}">
 		<relationship name="parameter">

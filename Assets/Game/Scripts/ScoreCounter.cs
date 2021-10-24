@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ScoreCounter : MonoBehaviour
     bool alive = true;
 
     Text textField;
+    public GameObject button;
 
     void Start()
     {
@@ -32,7 +34,13 @@ public class ScoreCounter : MonoBehaviour
     public void Show()
     {
         alive = false;
+        button.SetActive(true);
 
         textField.text = "You survived for " + minutes + "m " + seconds + "." + milliSeconds + "s";
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
