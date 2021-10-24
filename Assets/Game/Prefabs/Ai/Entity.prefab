@@ -155,7 +155,7 @@ MonoBehaviour:
   - {x: -0.06523079, y: -0.019542992, z: 0}
   m_ShapePathHash: 297933305
   m_Mesh: {fileID: 0}
-  m_InstanceId: 88310
+  m_InstanceId: 103708
 --- !u!95 &6670370981932834681
 Animator:
   serializedVersion: 3
@@ -190,12 +190,12 @@ MonoBehaviour:
   thisRigidbody2D: {fileID: 0}
   scanRadius: 2
   scanDistance: 1
-  avoidRadius: 0.5
+  avoidRadius: 0.7
   avoidObjectsScanDistance: 1
-  cohesionAmount: 0.5
+  cohesionAmount: 1
   moveSpeed: 3
-  maxSpeed: 5
-  currentAvoidForce: 0
+  maxSpeed: 6
+  currentAvoidForce: 1
   avoidForceProximityMultiplier: 100
   avoidObjectDirectionFallOffSpeed: 20
   avoidObjectMultiplier: 20
