@@ -11,7 +11,7 @@ public class Background : MonoBehaviour
 
     private void Start() {
         obstacles = new List<GameObject>();
-        SpawnObstacles();
+        //SpawnObstacles();
     }
     
     public void Move(float distance)
