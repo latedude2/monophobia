@@ -100,6 +100,10 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 	</object>
 	<object class="MarkerTrack" id="{e320a0d1-b969-46bb-a1ce-a07ba1f6dca2}" />
 	<object class="GroupTrack" id="{e52a6a4c-3126-48f2-b39a-93f600640c21}">
+		<relationship name="automationTracks">
+			<destination>{57bd76ab-7b49-4d09-b5d9-36ef281e368c}</destination>
+			<destination>{80fa0b94-3261-401c-a5ab-8c9863c58dbf}</destination>
+		</relationship>
 		<relationship name="modules">
 			<destination>{5f333ad5-7ed8-433e-9499-bf039935ca03}</destination>
 		</relationship>
@@ -146,13 +150,32 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c6060973-aef3-4edd-bb2f-8538a3c93cbb}" />
+	<object class="AutomationTrack" id="{57bd76ab-7b49-4d09-b5d9-36ef281e368c}">
+		<relationship name="automator">
+			<destination>{6d224f9a-d803-46c1-8fbc-1e665cc992d1}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationTrack" id="{80fa0b94-3261-401c-a5ab-8c9863c58dbf}">
+		<relationship name="automator">
+			<destination>{f93f6c7d-8fa3-4a10-9ff9-dfe8d66dde8a}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{5f333ad5-7ed8-433e-9499-bf039935ca03}">
 		<property name="length">
-			<value>25.000001907348633</value>
+			<value>60</value>
+		</property>
+		<property name="delayType">
+			<value>0</value>
+		</property>
+		<property name="pitch">
+			<value>12</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<relationship name="automators">
+			<destination>{f93f6c7d-8fa3-4a10-9ff9-dfe8d66dde8a}</destination>
+		</relationship>
 		<relationship name="modulators">
 			<destination>{91877568-b52d-4491-b88e-909cb484d4b7}</destination>
 		</relationship>
@@ -164,6 +187,9 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 		<property name="name">
 			<value>Heartbeat</value>
 		</property>
+		<relationship name="automators">
+			<destination>{6d224f9a-d803-46c1-8fbc-1e665cc992d1}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{12e4bef3-4ae7-4dc3-ab2c-918395142b07}</destination>
 		</relationship>
@@ -176,7 +202,7 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 	</object>
 	<object class="SnapshotModule" id="{f83484c3-887e-43cc-9798-c5e710b71880}">
 		<property name="length">
-			<value>25.000001907348633</value>
+			<value>60</value>
 		</property>
 		<relationship name="event">
 			<destination>{87ea4134-fff1-4e9d-8f8b-294a2b518223}</destination>
@@ -203,6 +229,14 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 	</object>
 	<object class="MixerBusPanner" id="{79716332-7c36-4d14-8635-0cc90c0b33fd}" />
 	<object class="MixerBusFader" id="{603aa62a-aa98-43c1-86ac-3508abc834a2}" />
+	<object class="Automator" id="{f93f6c7d-8fa3-4a10-9ff9-dfe8d66dde8a}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>pitch</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{78f230ec-4696-42bd-a331-67a5f815bd23}</destination>
+		</relationship>
+	</object>
 	<object class="ADSRModulator" id="{91877568-b52d-4491-b88e-909cb484d4b7}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -217,6 +251,14 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 			<value>-80</value>
 		</property>
 	</object>
+	<object class="Automator" id="{6d224f9a-d803-46c1-8fbc-1e665cc992d1}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{11e76a06-9bb3-40c6-822f-4013b82f165c}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{12e4bef3-4ae7-4dc3-ab2c-918395142b07}">
 		<relationship name="effects">
 			<destination>{85ed5024-67b1-43cd-ba69-2e565f654728}</destination>
@@ -230,6 +272,62 @@ https://commons.wikimedia.org/wiki/File:Heartbeat.ogg</value>
 	</object>
 	<object class="MixerBusPanner" id="{21cd1417-ba80-4d5d-a932-ba56e2d56823}" />
 	<object class="MixerBusFader" id="{b9fbc7ba-3d84-4890-ad7d-5421fd193617}" />
+	<object class="AutomationCurve" id="{78f230ec-4696-42bd-a331-67a5f815bd23}">
+		<relationship name="parameter">
+			<destination>{b1dc55b5-1863-4645-a918-a52d80cb9c65}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{83a7893c-cda2-4f2a-9026-1f1c4e388d38}</destination>
+			<destination>{b8a9a21e-618e-4ff3-8004-7ab7c5c93ca1}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{11e76a06-9bb3-40c6-822f-4013b82f165c}">
+		<relationship name="parameter">
+			<destination>{b1dc55b5-1863-4645-a918-a52d80cb9c65}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{58de13e7-ca27-4cdc-90d5-acc8b6bb90dc}</destination>
+			<destination>{f9b49239-a997-4535-b2af-6bc5e5126c2d}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{85ed5024-67b1-43cd-ba69-2e565f654728}" />
 	<object class="MixerBusFader" id="{0cb9e02c-636b-4ef9-9c12-37a7db7afcaa}" />
+	<object class="AutomationPoint" id="{83a7893c-cda2-4f2a-9026-1f1c4e388d38}">
+		<property name="position">
+			<value>42</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{b8a9a21e-618e-4ff3-8004-7ab7c5c93ca1}">
+		<property name="position">
+			<value>20</value>
+		</property>
+		<property name="value">
+			<value>12</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.1536441</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{58de13e7-ca27-4cdc-90d5-acc8b6bb90dc}">
+		<property name="position">
+			<value>40</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<property name="curveShape">
+			<value>0.527850091</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{f9b49239-a997-4535-b2af-6bc5e5126c2d}">
+		<property name="position">
+			<value>60</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+	</object>
 </objects>

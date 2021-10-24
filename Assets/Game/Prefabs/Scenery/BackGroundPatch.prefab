@@ -225,7 +225,12 @@ MonoBehaviour:
   - {fileID: 7313958953691933649, guid: cc6140c420a1f10429c355bcc7272261, type: 3}
   - {fileID: 7313958953691933649, guid: 18b904a73f44cf24fb4e0c71e09a7449, type: 3}
   - {fileID: 7313958953691933649, guid: ccbf15a156d560641b80f61a13779d1b, type: 3}
+  bloodPrefabs:
+  - {fileID: 8111299639084631161, guid: 0a6f3970b0981b5428cfadaa9b5d218a, type: 3}
+  - {fileID: 5308176877695270823, guid: 6a6d5bb1a28298e408c95d85938b27f0, type: 3}
+  - {fileID: 7731480585741225018, guid: 9131fdb6e43c47543affd9086fa81366, type: 3}
   obstacleCount: 3
+  bloodCount: 20
 --- !u!1 &6915454366324656700
 GameObject:
   m_ObjectHideFlags: 0

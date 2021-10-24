@@ -9,7 +9,7 @@ public class BackgroundSpawner : MonoBehaviour
     [SerializeField] List<GameObject> backgroundPatches;
     [SerializeField] GameObject backgroundPrefab;
 
-    float distanceAhead = 30f;
+    float distanceAhead = 35f;
     
     // Update is called once per frame
     void Update()
