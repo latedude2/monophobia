@@ -250,6 +250,12 @@ public class BoidRigidbody2D : MonoBehaviour
         //prevent going over max speed
         if (thisRigidbody2D.velocity.magnitude > maxSpeed)
             thisRigidbody2D.velocity = Vector2.ClampMagnitude(thisRigidbody2D.velocity, maxSpeed);
+
+        // Rotate in direction of movement
+        float rotation = Vector2.Angle(Vector2.up, thisRigidbody2D.velocity);
+        float sign = Mathf.Sign(-thisRigidbody2D.velocity.x);
+        rotation *= sign;
+        transform.rotation = Quaternion.Euler(0, 0, rotation);
     }
     /// <summary>
     /// Calculate the direction to move taking into account other surrounding flockmates and objects
