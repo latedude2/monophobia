@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3951185963724444204}
   - component: {fileID: 1839775591762018809}
   - component: {fileID: 2108407079378307106}
+  - component: {fileID: 4804975166261004556}
+  - component: {fileID: 630480731265654418}
   m_Layer: 5
   m_Name: DeathInfo
   m_TagString: Untagged
@@ -461,6 +463,32 @@ MonoBehaviour:
   - Don't leave me here
   - Is it because I didn't go to the church?
   - 
+--- !u!114 &4804975166261004556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161258709726887459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1528697e6f97e4b44936000d56121c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 4
+  fadeTime: 0.01
+--- !u!225 &630480731265654418
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2161258709726887459}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2942417435792980309
 GameObject:
   m_ObjectHideFlags: 0

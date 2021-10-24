@@ -60,5 +60,6 @@ public class CharacterGenerator : MonoBehaviour
         gameObject.transform.Find("LastWords").GetComponent<Text>().text = '"' + LastWords + '"';
         gameObject.transform.Find("Image").GetComponent<Image>().sprite = RandomImage;
 
+        GetComponent<BioInfoDisplay>().Display();
     }
 }
