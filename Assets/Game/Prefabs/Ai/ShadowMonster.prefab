@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5965406308306379653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3087458817878655750}
+  - component: {fileID: 5410452838886436124}
+  m_Layer: 0
+  m_Name: Visuals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3087458817878655750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965406308306379653}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: -0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4602114717336630017}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &5410452838886436124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5965406308306379653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 0000000023b993879f431388
+  m_ShapePath:
+  - {x: -0.12890682, y: -1.2344463, z: 0}
+  - {x: -0.18437828, y: -0.7746162, z: 0.000000059604645}
+  - {x: -0.1966425, y: -1.0382961, z: 0.000000059604645}
+  - {x: -0.2844606, y: -0.36880517, z: 0.000000059604645}
+  - {x: -0.4622681, y: -0.08862293, z: 0.000000059604645}
+  - {x: -0.51775104, y: 0.12139881, z: 0.000000059604645}
+  - {x: -0.4435941, y: 0.36985338, z: 0}
+  - {x: -0.4440781, y: 0.10050595, z: 0.000000059604645}
+  - {x: -0.33585572, y: -0.047816753, z: 0.000000059604645}
+  - {x: -0.21181786, y: -0.11356413, z: 0.000000059604645}
+  - {x: -0.0364663, y: 0.01318109, z: 0.000000059604645}
+  - {x: 0.00023770332, y: 0.22509241, z: 0.000000059604645}
+  - {x: -0.05228263, y: 0.5211841, z: 0.000000059604645}
+  - {x: 0.056410164, y: 0.34574127, z: 0.000000059604645}
+  - {x: 0.07131523, y: 0.21071577, z: 0.000000059604645}
+  - {x: 0.045432806, y: 0.071965575, z: 0.000000059604645}
+  - {x: 0.00666818, y: -0.13048518, z: 0.000000059604645}
+  - {x: 0.14262748, y: 0.08754003, z: 0.000000059604645}
+  - {x: 0.16855925, y: 0.29175246, z: 0.000000059604645}
+  - {x: 0.10617113, y: 0.5258194, z: 0}
+  - {x: 0.21393979, y: 0.37603068, z: 0.000000059604645}
+  - {x: 0.25607884, y: 0.24313045, z: 0.000000059604645}
+  - {x: 0.23338854, y: 0.07781565, z: 0.000000059604645}
+  - {x: 0.17828369, y: -0.071291804, z: 0.000000059604645}
+  - {x: -0.005597085, y: -0.31772396, z: 0}
+  - {x: -0.055604342, y: -0.9892392, z: 0.000000059604645}
+  - {x: -0.10466101, y: -0.76848406, z: 0.000000059604645}
+  m_ShapePathHash: -1269123047
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -117344
+--- !u!1 &7390528718475872881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4602114717336630017}
+  m_Layer: 0
+  m_Name: ShadowMonster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4602114717336630017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390528718475872881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.439, y: 1.109, z: -0.70051986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3087458817878655750}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
