@@ -30,7 +30,7 @@ public class Background : MonoBehaviour
         for(int i = 0; i < obstacleCount; i++)
         {
             GameObject obstacle = Instantiate(obstaclePrefabs[Random.Range(0, obstaclePrefabs.Count - 1)], 
-                                              new Vector3(transform.position.x + Random.Range(-1f, 1f), transform.position.y + Random.Range(-2f, 2f), transform.position.z), 
+                                              new Vector3(transform.position.x + Random.Range(-1.5f, 1.5f), transform.position.y + Random.Range(-3f, 3f), transform.position.z), 
                                               Quaternion.identity, gameObject.transform);
             obstacle.transform.Rotate(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
             obstacles.Add(obstacle);

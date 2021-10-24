@@ -11,6 +11,8 @@ public class CrowdManager : MonoBehaviour {
     public float distFactor = 1;
     public float outerFactor = 1;
 
+    [SerializeField] float musicIntensity = 0f;
+
     private GameObject player;
 
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class CrowdManager : MonoBehaviour {
     }
 
     void Update() {
+        AdjustMusicIntensity();
         // Instantiate mock boids with mouse for testing purposes
         /*
         if (preyPrefab) {
@@ -29,6 +32,12 @@ public class CrowdManager : MonoBehaviour {
             }
         }
         */
+    }
+
+    void AdjustMusicIntensity()
+    {
+        musicIntensity = 1f - ((float)GetComponentsInChildren<Transform>().Length / (float)initialCrowdSize);
+        GameObject.Find("Music").GetComponent<AudioManager>().intensity = musicIntensity;
     }
 
     public List<Prey> GetAllPrey() {
