@@ -343,6 +343,7 @@ MonoBehaviour:
   milliSeconds: 0
   seconds: 0
   minutes: 0
+  button: {fileID: 8113393763339751568}
 --- !u!1 &8113393763339751568
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4969314332179746426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8700399421165632081}
         m_TargetAssemblyTypeName: ScoreCounter, Assembly-CSharp
-        m_MethodName: Show
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
