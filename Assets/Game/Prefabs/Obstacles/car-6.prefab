@@ -50,13 +50,13 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.081462964, y: -0.17977625, z: 0}
-  - {x: -0.077632576, y: 0.04571271, z: 0}
-  - {x: 0.07483296, y: 0.044146776, z: 0}
-  - {x: 0.077390134, y: -0.17967749, z: 0}
-  m_ShapePathHash: -1045273407
+  - {x: -0.08431123, y: -0.2324692, z: 0}
+  - {x: -0.08048083, y: 0.074195385, z: 0}
+  - {x: 0.07768123, y: 0.07690185, z: 0}
+  - {x: 0.08308667, y: -0.22952217, z: 0}
+  m_ShapePathHash: -1938035705
   m_Mesh: {fileID: 0}
-  m_InstanceId: 46260
+  m_InstanceId: 46678
 --- !u!1 &7313958953691933649
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 3008453611780685268}
   - component: {fileID: 1715751057}
   m_Layer: 0
-  m_Name: car-1
+  m_Name: car-6
   m_TagString: ActionableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 21300000, guid: 60d3efc2071362348802b23c328ed74f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f09aa1220ceae1244921907b08cfa3ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -238,4 +238,4 @@ MonoBehaviour:
   - {x: -0.06875567, y: -0.30949497, z: 0}
   m_ShapePathHash: -338253174
   m_Mesh: {fileID: 0}
-  m_InstanceId: 46254
+  m_InstanceId: 46672

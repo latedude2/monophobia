@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class CrowdManager : MonoBehaviour {
     public GameObject preyPrefab;
+    public uint initialCrowdSize = 100;
+    public float initialCrowdRadius = 10;
+    
+    // Values for tuning loneliest calculation
     public float distFactor = 1;
     public float outerFactor = 1;
+
     private GameObject player;
 
     // Start is called before the first frame update
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
+        SpawnCrowd(initialCrowdSize, (Vector2)player.transform.position, initialCrowdRadius);
     }
 
     void Update() {
@@ -18,8 +24,7 @@ public class CrowdManager : MonoBehaviour {
         if (preyPrefab) {
             if (Input.GetMouseButtonDown(0)) {
                 Vector2 position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                GameObject prey = Instantiate(preyPrefab, position, Quaternion.identity);
-                prey.transform.SetParent(transform);
+                SpawnCrowd(10, position, 2);
             }
         }
     }
@@ -33,8 +38,10 @@ public class CrowdManager : MonoBehaviour {
                 Out.Add(child.GetComponent<Prey>());
             }
         }
-        if (player.TryGetComponent<Prey>(out Prey playerPrey)) {
-            Out.Add(playerPrey);
+        if (player != null) {
+            if (player.TryGetComponent<Prey>(out Prey playerPrey)) {
+                Out.Add(playerPrey);
+            }
         }
         return Out;
     }
@@ -61,6 +68,17 @@ public class CrowdManager : MonoBehaviour {
         } else {
             mostLonely = null;
             return false;
+        }
+    }
+
+    public void SpawnCrowd(uint crowdSize, Vector2 center, float radius) {
+        for (int i = 0; i < crowdSize; i++) {
+            Vector2 randDir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            randDir.Normalize();
+            Vector2 pos = center + randDir * Mathf.Pow(Random.Range(0f, radius), 0.5f);
+            GameObject prey = Instantiate(preyPrefab, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+            prey.transform.SetParent(transform);
+            
         }
     }
 }

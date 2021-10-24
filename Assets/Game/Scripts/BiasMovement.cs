@@ -13,9 +13,11 @@ public class BiasMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 moveDirection = new Vector2(x, y);
-        if(transform.position.y > 0)
+        if(transform.position.y > 2.5)
             moveDirection.y = -y;
-        else moveDirection.y = y;
+        else if(transform.position.y < -2.5)
+            moveDirection.y = y;
+        else moveDirection.y = 0;
 
         GetComponent<Rigidbody2D>().AddForce(moveDirection);
     }
