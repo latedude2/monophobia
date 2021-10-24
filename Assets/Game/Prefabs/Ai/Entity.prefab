@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -3769633931189153885}
   - component: {fileID: 4008848503368021205}
   - component: {fileID: 1333650516807661096}
+  - component: {fileID: 5807048074730227003}
   m_Layer: 3
   m_Name: Entity
   m_TagString: Runner
@@ -59,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d86240117095c594aa623e064335f4d4, type: 2}
+  - {fileID: 2100000, guid: c2e2662586fc7b042863abe81ac86c89, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,7 +155,7 @@ MonoBehaviour:
   - {x: -0.06523079, y: -0.019542992, z: 0}
   m_ShapePathHash: 297933305
   m_Mesh: {fileID: 0}
-  m_InstanceId: 37422
+  m_InstanceId: 39808
 --- !u!95 &6670370981932834681
 Animator:
   serializedVersion: 3
@@ -262,3 +263,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   y: 1
   x: 12
+--- !u!114 &5807048074730227003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292316067377519992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c3bc14bc8ae480a96cbfa9520ae02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.3372549, g: 0.07450981, b: 0.019607844, a: 0}
+  - {r: 0.13725491, g: 0.21176472, b: 0.32156864, a: 0}
+  - {r: 0.654902, g: 0.19607845, b: 0.08627451, a: 0}
+  - {r: 0.2901961, g: 0.34901962, b: 0.18039216, a: 0}
+  - {r: 0.43137258, g: 0.23137257, b: 0.3372549, a: 0}
+  - {r: 0.2509804, g: 0.38823533, b: 0.48627454, a: 0}
+  - {r: 0.27058825, g: 0.2627451, b: 0.2901961, a: 0}
+  - {r: 0.6745098, g: 0.37254903, b: 0.16862746, a: 0}
+  - {r: 0.41176474, g: 0.18823531, b: 0.18431373, a: 0}
+  - {r: 0.4901961, g: 0.3019608, b: 0.64705884, a: 0}
