@@ -155,7 +155,7 @@ MonoBehaviour:
   - {x: -0.06523079, y: -0.019542992, z: 0}
   m_ShapePathHash: 297933305
   m_Mesh: {fileID: 0}
-  m_InstanceId: 88310
+  m_InstanceId: 48342
 --- !u!95 &6670370981932834681
 Animator:
   serializedVersion: 3
@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loneliness: 0
+  lonelyDeath: 20
   alive: 1
 --- !u!114 &4008848503368021205
 MonoBehaviour:
@@ -262,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   y: 1
-  x: 12
+  x: 18
 --- !u!114 &5807048074730227003
 MonoBehaviour:
   m_ObjectHideFlags: 0

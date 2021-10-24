@@ -5,17 +5,24 @@ using UnityEngine;
 public class Prey : MonoBehaviour {
 
     public float loneliness = 0;
+    public int lonelyDeath;
     public bool alive = true;
     private CrowdManager crowdManager;
+    private Enemy enemy;
 
     // Start is called before the first frame update
     void Start() {
         crowdManager = FindObjectOfType<CrowdManager>();
+        enemy = crowdManager.gameObject.GetComponent<Enemy>();
     }
 
     // Update is called once per frame
     void Update() {
         UpdateLoneliness();
+        if (loneliness > lonelyDeath)
+        {
+            KillIfLonely();
+        }
     }
 
     public void UpdateLoneliness() {
@@ -32,5 +39,10 @@ public class Prey : MonoBehaviour {
         }
         outerMost /= crowdManager.GetAllPrey().Count;
         loneliness = minDist * crowdManager.distFactor + outerMost * crowdManager.outerFactor;
+    }
+
+    void KillIfLonely()
+    {
+        enemy.Kill(gameObject);
     }
 }

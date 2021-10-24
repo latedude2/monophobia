@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loneliness: 0
+  lonelyDeath: 20
   alive: 1
 --- !u!114 &6322294267716074183
 MonoBehaviour:
@@ -412,7 +413,7 @@ MonoBehaviour:
   interactMaxDistance: 1
   pushForce: 500
   pushCooldown: 3
-  pushStaminaCost: 60
+  pushStaminaCost: 40
   grabForce: 1500
   grabStaminaCost: 40
 --- !u!95 &1502416356
