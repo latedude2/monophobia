@@ -15,7 +15,6 @@ public class Background : MonoBehaviour
     private void Start() {
         obstacles = new List<GameObject>();
         blood = new List<GameObject>();
-        SpawnObstacles();
         SpawnBlood();
     }
     
