@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 6378170307561184627}
   - component: {fileID: 3008453611780685268}
   - component: {fileID: 1715751057}
+  - component: {fileID: 5292163692579516022}
   m_Layer: 0
   m_Name: car-10
   m_TagString: ActionableObject
@@ -239,3 +240,15 @@ MonoBehaviour:
   m_ShapePathHash: -338253174
   m_Mesh: {fileID: 0}
   m_InstanceId: 47584
+--- !u!114 &5292163692579516022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7313958953691933649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d760031caa2d7f4dbb5e1ca70e8ac32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
