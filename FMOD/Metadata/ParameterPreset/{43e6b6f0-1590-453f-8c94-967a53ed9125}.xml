@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.00.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{43e6b6f0-1590-453f-8c94-967a53ed9125}">
 		<property name="name">
-			<value>Health</value>
+			<value>Stamina</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0c8bfb2a-0176-4c5c-93b8-21686ed85878}</destination>

@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preyPrefab: {fileID: 292316067377519992, guid: fd60dcd3f417deb40b12ef2c910f16e9, type: 3}
+  initialCrowdSize: 50
+  initialCrowdRadius: 10
   distFactor: 1
   outerFactor: 1
 --- !u!114 &589790238
@@ -64,3 +66,4 @@ MonoBehaviour:
   monsterSpeed: 12
   charGen: {fileID: 0}
   attackTime: 5
+  endScreen: {fileID: 0}

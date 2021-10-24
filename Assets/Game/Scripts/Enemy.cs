@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
     public CharacterGenerator charGen;
     private GameObject currentTarget;
     [SerializeField] [Min(0.001f)] private float attackTime = 1;
+    public ScoreCounter endScreen;
 
     void Start() {
         crowdManager = FindObjectOfType<CrowdManager>();
@@ -59,6 +60,10 @@ public class Enemy : MonoBehaviour {
 
     void Kill()
     {
+        if (currentTarget.tag == "Player")
+        {
+            endScreen.Show();
+        }
         Destroy(currentTarget.gameObject);
         charGen.showDeadCharacter();
     }
