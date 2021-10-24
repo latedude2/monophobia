@@ -12,8 +12,11 @@ public class ScoreCounter : MonoBehaviour
     public float minutes;
     bool alive = true;
 
+    int distance;
+
     Text textField;
     public GameObject button;
+    public GameObject player;
 
     void Start()
     {
@@ -33,10 +36,11 @@ public class ScoreCounter : MonoBehaviour
 
     public void Show()
     {
+        distance = Mathf.FloorToInt(player.transform.position.x);
         alive = false;
         button.SetActive(true);
 
-        textField.text = "You survived for " + minutes + "m " + seconds + "." + milliSeconds + "s";
+        textField.text = "You survived for " + minutes + "m " + seconds + "." + milliSeconds + "s" + "\n" + "And you managed to run " + distance + " meters";
     }
 
     public void Restart()
