@@ -78,5 +78,5 @@ Material:
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShirtColor: {r: 0, g: 0.031180859, b: 1, a: 0}
+    - _ShirtColor: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
