@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObjectInitializer : MonoBehaviour
 {
     public GameObject player;
-    public GameObject respawnsPrefab;
+    public GameObject car;
 
-    public GameObject[] respawns;
+    GameObject[] respawns;
 
     public GameObject road;
 
@@ -50,14 +51,20 @@ public class ObjectInitializer : MonoBehaviour
 
     }
     void DistanceAndInitialize(Vector2[] gameObjectsPositions, Vector2 playerPosition)
-    {
+    {   
         float distance;
+
+        Vector3 carSpawnPosition = new Vector3(RoadWidth(), (float)Random.Range(3,-3), 0f);
+
+        //float carspawnrotation = Random.Range(0,360);
         
         for (int i = 0; i < gameObjectsPositions.Length; i++)
         {
             distance = Vector2.Distance(gameObjectsPositions[i], playerPosition);
             
-            if(distance < RoadWidth() && gameObjectsPositions[i].position)
+            if(distance < RoadWidth() && gameObjectsPositions[i].x > playerPosition.x){
+                Instantiate(car, carSpawnPosition, player.transform.rotation);
+            }
 
             
         }
@@ -107,7 +114,13 @@ public class ObjectInitializer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(RoadWidth());
+
+        Vector3 carSpawnPosition = new Vector3(RoadWidth(), (float)Random.Range(3,-3), 0f);
+
         
+
+        Instantiate(car, carSpawnPosition, player.transform.rotation);
     }
 
     // Update is called once per frame
@@ -115,8 +128,7 @@ public class ObjectInitializer : MonoBehaviour
     {
 
         ObjectsWithRespawn = GameObjectsFindRespawn();
-        PlayerPosition();
-        DistanceAndInitialize(GameObjectsPositions(ObjectsWithRespawn), PlayerPosition());
+        //DistanceAndInitialize(GameObjectsPositions(ObjectsWithRespawn), PlayerPosition());
         
     }
 }
