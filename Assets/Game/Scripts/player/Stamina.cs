@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Stamina : MonoBehaviour
 {
     public float stamina = 100f;
+    public bool tired = false;
     [SerializeField] private float staminaRegenSpeed;
 
     void Start()
@@ -15,6 +16,12 @@ public class Stamina : MonoBehaviour
 
     void Update()
     {
+        if(stamina < 0)
+        {
+            tired = true;
+            Invoke(nameof(Recover), 1f);
+        }
+
         RegenerateStamina();
     }
 
@@ -29,5 +36,9 @@ public class Stamina : MonoBehaviour
         {
             stamina += staminaRegenSpeed * Time.deltaTime;
         }
+    }
+    void Recover()
+    {
+        tired = false;
     }
 }
