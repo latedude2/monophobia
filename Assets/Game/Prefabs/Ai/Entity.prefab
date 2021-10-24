@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loneliness: 0
+  lonelyDeath: 20
   alive: 1
 --- !u!114 &4008848503368021205
 MonoBehaviour:

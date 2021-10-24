@@ -51,20 +51,20 @@ public class Enemy : MonoBehaviour {
         _shadowMonster.transform.Translate(Vector3.right * monsterSpeed * Time.deltaTime);
 
         float dist = Vector3.Distance(_shadowMonster.transform.position, currentTarget.transform.position);
-        if (dist < .01f)
+        if (dist < .1f)
         {
-            Kill();
+            Kill(currentTarget);
             Destroy(_shadowMonster);
         }
     }
 
-    void Kill()
+    public void Kill(GameObject target)
     {
-        if (currentTarget.tag == "Player")
+        if (target.tag == "Player")
         {
             endScreen.Show();
         }
-        Destroy(currentTarget.gameObject);
+        Destroy(target.gameObject);
         charGen.showDeadCharacter();
     }
 }
